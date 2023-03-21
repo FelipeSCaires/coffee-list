@@ -11,7 +11,7 @@ interface Props {
 }
 
 export default function BasicSelect({ type, selected }: Props) {
-    const [age, setAge] = useState<any>(selected === 'hot' ? '10' : '20');
+    const [age, setAge] = useState<any>(selected ? selected === 'hot' ? '10' : '20' : '10');
 
     const handleChange = (event: SelectChangeEvent) => {
         setAge(event.target.value as string);
