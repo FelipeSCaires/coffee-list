@@ -15,7 +15,7 @@ export function Header({ icon, title, textButton, navigate, onclick }: IHeader) 
             </div>
             {
                 window.location.href === 'http://localhost:3000/' ?
-                    <Link to={navigate!}>  <Button variant="contained" color="primary" >{textButton}</Button></Link>
+                    <Link to={navigate!} className={styles.link}>  <Button variant="contained" color="primary" >{textButton}</Button></Link>
                     :
                     <Button variant="contained" color="primary" onClick={onclick}>{textButton}</Button>
             }

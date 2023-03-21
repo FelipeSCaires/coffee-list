@@ -1,5 +1,12 @@
 .container{
-    width: 100vw;
+    width: 100%;
     height: auto;
     padding: 6.25rem;
+}
+.wrapper{
+    background: white;
+    margin: 7rem 6.5rem;
+}
+.content{
+    padding: 2rem 6.256rem
 }

@@ -3,13 +3,19 @@ import FormControl from '@mui/material/FormControl';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import * as React from 'react';
+import { useState } from 'react';
 
-export default function BasicSelect() {
-    const [age, setAge] = React.useState('');
+interface Props {
+    type?: any
+    selected?: any
+}
+
+export default function BasicSelect({ type, selected }: Props) {
+    const [age, setAge] = useState<any>(selected === 'hot' ? '10' : '20');
 
     const handleChange = (event: SelectChangeEvent) => {
         setAge(event.target.value as string);
+        type(age)
     };
 
     return (
@@ -23,8 +29,8 @@ export default function BasicSelect() {
                     label="Tipo"
                     onChange={handleChange}
                 >
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={10}>Hot</MenuItem>
+                    <MenuItem value={20}>Iced</MenuItem>
                 </Select>
             </FormControl>
         </Box>

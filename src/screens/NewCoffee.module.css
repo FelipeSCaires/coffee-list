@@ -1,5 +1,5 @@
 .container{
-    width: 100vw;
+    width: 100%;
     height: auto;
     padding: 6.25rem;
 }
@@ -10,6 +10,9 @@
     font-size: 1.25rem;
 }
 .input{
-    width: 50vw;
     margin-top: 5rem;
+}
+.wrapper{
+    background: white;
+    margin: 7rem 15rem;
 }

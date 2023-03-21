@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 6rem;
+    padding: 6.15rem;
 }
 .wrapper button{
     padding: 1.25rem 2rem;
@@ -20,4 +20,8 @@
     color: var(--gray-900);
     margin-left: 2rem;
     font-size: 3rem;
+}
+.link{
+    text-decoration: none;
+
 }
